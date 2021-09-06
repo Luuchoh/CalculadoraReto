@@ -22,7 +22,9 @@ const CalculatorComp = () => {
   //CALCULO
   const calculo = () => {
     try {
-      setRespuesta(eval(expresion));
+      // eslint-disable-next-line
+      let calculo = eval(expresion);
+      setRespuesta(calculo);
       setExpresion((contain) => contain + " :");
     } catch (error) {
       setRespuesta("SYNTAXIS ERROR!");
